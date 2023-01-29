@@ -7,7 +7,6 @@
         
 
         {
-            "initCommands":["settings set target.disable-aslr false"],
             "name": "clang++ - Build and debug active file",
             "type": "lldb",
             "request": "launch",
