@@ -1,12 +1,12 @@
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**"
             ],
             "defines": [],
-            "intelliSenseMode": "linux-gcc-x64"
+            "intelliSenseMode": "macos-clang-x64"
         }
     ],
     "version": 4
