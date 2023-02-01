@@ -1,7 +1,8 @@
 /*
 Course:  CS215-012
 Project: Lab #2
-Purpose: 
+Purpose: Asks user if they would like 3 numbers sorted in increasing or decreasing order. Program then asks user to input
+        
          
 
 Author:  Seth Hammonds
