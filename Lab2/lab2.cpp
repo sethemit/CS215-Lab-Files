@@ -21,12 +21,18 @@ int main()
 
     int num1, num2, num3;
 
-    bool validInput = false;    //bool used for while statement 
-
 	cout << "Your wish is my command!" << endl;
     cout << "I will sort three numbers under your wish:" << endl;
     cout << "Enter I for increasing ordering, D for decreasing order (I or D): ";
     cin >> userInput;   //prompts user input
+
+    //for invalid user input
+    if (userInput != i && userInput != I && userInput != d && userInput != D)
+    {
+        cout << "Invalid choice, quitting the program...";
+        cin.clear();
+        return 1;
+    }
 
     cout << "Please enter three integer numbers: ";
     cin >> num1 >> num2 >> num3;   //prompts user input
@@ -123,11 +129,9 @@ int main()
         }
     }
 
-    cout << num1 << num2 << num3;
     //outputs if numbers are strictly/leniently in increasing/decreasing order
     if (num1 == num2 || num1 == num3 || num2 == num3)
     {
-        cout << "test" << endl;
         if (userInput == i || userInput == I)
         {
             cout << "Numbers are in leniently increasing order!" << endl;
