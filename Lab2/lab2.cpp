@@ -38,49 +38,51 @@ int main()
         cin.clear();
         return 1;
     }
+
+    //decreasing order if statement
     if (userInput == d || userInput == D)
     {
         if (num1 >= num2 && num1 >= num3)
         {
-            cout << num1 << " ---> ";
+            cout << num1 << " ---> ";   //displays num1 first if largest
             if (num2 >= num3)
             {
-                cout << num2 << " ---> " << num3 << endl;
+                cout << num2 << " ---> " << num3 << endl;   //displays num2 second if larger than num3
             }
             else
             {
-                cout << num3 << " ---> " << num2 << endl;
+                cout << num3 << " ---> " << num2 << endl;   //displays num3 second if larger than num2
             }
         }
         else if (num2 >= num1 && num2 >= num3)
         {
-            cout << num2 << " ---> ";
+            cout << num2 << " ---> ";   //displays num2 first if largest
             if (num1 >= num3)
             {
                 cout << num1 << " ---> " << num3 << endl;
             }
             else
             {
-                cout << num3 << " ---> " << num1 << endl;
+                cout << num3 << " ---> " << num1 << endl;   //displays num3 second if larger than num1
             }
         }
         else
         {
-            cout << num3 << " ---> ";
+            cout << num3 << " ---> ";   //displays num3 first if largest
             if (num2 >= num1)
             {
-                cout << num2 << " ---> " << num1 << endl;
+                cout << num2 << " ---> " << num1 << endl;   //displays num2 second if larger than num1
             }
             else
             {
-                cout << num1 << " ---> " << num2 << endl;
+                cout << num1 << " ---> " << num2 << endl;   //displays num1 second if larger than num2
             }
         }
 
 
     }
 
-
+    //increasing order if statement
     else if (userInput == i || userInput == I)
     {
         if (num1 <= num2 && num1 <= num3)
@@ -121,8 +123,30 @@ int main()
         }
     }
 
-
-
-
+    cout << num1 << num2 << num3;
+    //outputs if numbers are strictly/leniently in increasing/decreasing order
+    if (num1 == num2 || num1 == num3 || num2 == num3)
+    {
+        cout << "test" << endl;
+        if (userInput == i || userInput == I)
+        {
+            cout << "Numbers are in leniently increasing order!" << endl;
+        }
+        else 
+        {
+            cout << "Numbers are in leniently decreasing order!" << endl;
+        }
+    }
+    else
+    {
+        if (userInput == i || userInput == I)
+        {
+            cout << "Numbers are in strictly increasing order!" << endl;
+        }
+        else 
+        {
+            cout << "Numbers are in strictly decreasing order!" << endl;
+        }
+    }
     return 0;
 }
