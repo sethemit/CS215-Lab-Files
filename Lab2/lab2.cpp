@@ -18,168 +18,35 @@ int main()
     const string I = "I";
     const string d = "d";
     const string D = "D";
-    
+
     int num1, num2, num3;
+
+    bool validInput = false;    //bool used for while statement 
 
 	cout << "Your wish is my command!" << endl;
     cout << "I will sort three numbers under your wish:" << endl;
     cout << "Enter I for increasing ordering, D for decreasing order (I or D): ";
-    //
-    cin >> userInput;
+    userInput = cin.get();   //prompts user input
+    cin.ignore(256,' ');
 
-    //increasing IF statement
-    if (userInput == i or userInput == I) {
-        cout << "Please enter three integer nuumbers: ";
-        cin >> num1 >> num2 >> num3;
-
-        if (num1 > num2 && num2 > num3) {
-            cout << "Numbers are sorted in increasing order:" << endl;
-            cout << num3 << " --> " << num2 << " --> " << num1 << endl;
-            cout << "Numbers are in strictly increasing order!" << endl;
-        }
-        else if (num1 < num2 && num2 < num3) {
-            cout << "Numbers are sorted in increasing order:" << endl;
-            cout << num1 << " --> " << num2 << " --> " << num3 << endl;
-            cout << "Numbers are in strictly increasing order!" << endl;
-        }
-        else if (num2 > num1 && num1 > num3) {
-            cout << "Numbers are sorted in increasing order:" << endl;
-            cout << num3 << " --> " << num1 << " --> " << num2 << endl;
-            cout << "Numbers are in strictly increasing order!" << endl;
-        }
-        else if (num2 < num1 && num1 < num3) {
-            cout << "Numbers are sorted in increasing order:" << endl;
-            cout << num2 << " --> " << num1 << " --> " << num3 << endl;
-            cout << "Numbers are in strictly increasing order!" << endl;
-        }
-        //leniently increasing orders
-        else if (num1 == num2 && num2 == num3) {
-            cout << "Numbers are sorted in increasing order:" << endl;
-            cout << num1 << " --> " << num2 << " --> " << num3 << endl;
-            cout << "Numbers are in leniently increasing order!" << endl;
-        }
-        else if (num1 >= num2 && num2 > num3) {
-            //
-            cout << "Numbers are sorted in increasing order:" << endl;
-            cout << num3 << " --> " << num2 << " --> " << num1 << endl;
-            cout << "Numbers are in leniently increasing order!" << endl;
-        }
-        else if (num1 <= num2 && num2 < num3) {
-            //
-            cout << "Numbers are sorted in increasing order:" << endl;
-            cout << num1 << " --> " << num2 << " --> " << num3 << endl;
-            cout << "Numbers are in strictly increasing order!" << endl;
-        }
-        else if (num2 >= num1 && num1 > num3) {
-            cout << "Numbers are sorted in increasing order:" << endl;
-            cout << num3 << " --> " << num1 << " --> " << num2 << endl;
-            cout << "Numbers are in strictly increasing order!" << endl;
-        }
-        else if (num2 <= num1 && num1 < num3) {
-            cout << "Numbers are sorted in increasing order:" << endl;
-            cout << num2 << " --> " << num1 << " --> " << num3 << endl;
-            cout << "Numbers are in strictly increasing order!" << endl;
-        }
-        else if (num1 > num2 && num2 >= num3) {
-            //
-            cout << "Numbers are sorted in increasing order:" << endl;
-            cout << num3 << " --> " << num2 << " --> " << num1 << endl;
-            cout << "Numbers are in leniently increasing order!" << endl;
-        }
-        else if (num1 < num2 && num2 <= num3) {
-            //
-            cout << "Numbers are sorted in increasing order:" << endl;
-            cout << num1 << " --> " << num2 << " --> " << num3 << endl;
-            cout << "Numbers are in strictly increasing order!" << endl;
-        }
-        else if (num2 > num1 && num1 >= num3) {
-            cout << "Numbers are sorted in increasing order:" << endl;
-            cout << num3 << " --> " << num1 << " --> " << num2 << endl;
-            cout << "Numbers are in strictly increasing order!" << endl;
-        }
-        else if (num2 < num1 && num1 <= num3) {
-            cout << "Numbers are sorted in increasing order:" << endl;
-            cout << num2 << " --> " << num1 << " --> " << num3 << endl;
-            cout << "Numbers are in strictly increasing order!" << endl;
-        }
+    //for invalid number choice:
+    if (cin.fail())
+    {
+        cout << "Invalid choice, quitting the program...";
+        cin.clear();
+        return 1;
     }
 
-    //decreasing IF statement
-    else if (userInput == d or userInput == D) {
-        cout << "Please enter three integer nuumbers: ";
-        cin >> num1 >> num2 >> num3;
-
-        //
-        if (num1 > num2 && num2 > num3) {
-            cout << "Numbers are sorted in decreasing order:" << endl;
-            cout << num1 << " --> " << num2 << " --> " << num3 << endl;
-            cout << "Numbers are in strictly decreasing order!" << endl;
-        }
-        else if (num1 < num2 && num2 < num3) {
-            cout << "Numbers are sorted in decreasing order:" << endl;
-            cout << num3 << " --> " << num2 << " --> " << num1 << endl;
-            cout << "Numbers are in strictly decreasing order!" << endl;
-        }
-        else if (num2 > num1 && num1 > num3) {
-            cout << "Numbers are sorted in decreasing order:" << endl;
-            cout << num2 << " --> " << num1 << " --> " << num3 << endl;
-            cout << "Numbers are in strictly decreasing order!" << endl;
-        }
-        else if (num2 < num1 && num1 < num3) {
-            cout << "Numbers are sorted in decreasing order:" << endl;
-            cout << num3 << " --> " << num1 << " --> " << num2 << endl;
-            cout << "Numbers are in strictly decreasing order!" << endl;
-        }
-        //leniently increasing orders
-        else if (num1 == num2 && num2 == num3) {
-            cout << "Numbers are sorted in decreasing order:" << endl;
-            cout << num1 << " --> " << num2 << " --> " << num3 << endl;
-            cout << "Numbers are in leniently decreasing order!" << endl;
-        }
-        else if (num1 >= num2 && num2 > num3) {
-            cout << "Numbers are sorted in decreasing order:" << endl;
-            cout << num1 << " --> " << num2 << " --> " << num3 << endl;
-            cout << "Numbers are in leniently decreasing order!" << endl;
-        }
-        else if (num1 <= num2 && num2 < num3) {
-            cout << "Numbers are sorted in decreasing order:" << endl;
-            cout << num3 << " --> " << num2 << " --> " << num1 << endl;
-            cout << "Numbers are in leniently decreasing order!" << endl;
-        }
-        else if (num2 >= num1 && num1 > num3) {
-            cout << "Numbers are sorted in decreasing order:" << endl;
-            cout << num2 << " --> " << num1 << " --> " << num3 << endl;
-            cout << "Numbers are in leniently decreasing order!" << endl;
-        }
-        else if (num2 <= num1 && num1 < num3) {
-            cout << "Numbers are sorted in decreasing order:" << endl;
-            cout << num3 << " --> " << num1 << " --> " << num2 << endl;
-            cout << "Numbers are in leniently decreasing order!" << endl;
-        }
-        else if (num1 > num2 && num2 >= num3) {
-            cout << "Numbers are sorted in decreasing order:" << endl;
-            cout << num1 << " --> " << num2 << " --> " << num3 << endl;
-            cout << "Numbers are in leniently decreasing order!" << endl;
-        }
-        else if (num1 < num2 && num2 <= num3) {
-            cout << "Numbers are sorted in decreasing order:" << endl;
-            cout << num3 << " --> " << num2 << " --> " << num1 << endl;
-            cout << "Numbers are in leniently decreasing order!" << endl;
-        }
-        else if (num2 > num1 && num1 >= num3) {
-            cout << "Numbers are sorted in decreasing order:" << endl;
-            cout << num2 << " --> " << num1 << " --> " << num3 << endl;
-            cout << "Numbers are in leniently decreasing order!" << endl;
-        }
-        else if (num2 < num1 && num1 <= num3) {
-            cout << "Numbers are sorted in decreasing order:" << endl;
-            cout << num3 << " --> " << num1 << " --> " << num2 << endl;
-            cout << "Numbers are in leniently decreasing order!" << endl;
-        }
+    cout << "Please enter three integer nuumbers: ";
+    num1 = cin.get();   //prompts user input
+    num2 = cin.get();   //prompts user input
+    num3 = cin.get();   //prompts user input
+    //for invalid number choice
+    if (cin.fail())
+    {
+        cout << "Invalid choice, quitting the program...";
+        cin.clear();
+        return 2;
     }
-    //else statement for invalid choice
-    else {
-        cout << "Invalid choice, quitting the program..." << endl;
-    }
-	return 0;
+    return 0;
 }
