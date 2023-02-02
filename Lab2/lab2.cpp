@@ -26,27 +26,103 @@ int main()
 	cout << "Your wish is my command!" << endl;
     cout << "I will sort three numbers under your wish:" << endl;
     cout << "Enter I for increasing ordering, D for decreasing order (I or D): ";
-    userInput = cin.get();   //prompts user input
-    cin.ignore(256,' ');
+    cin >> userInput;   //prompts user input
 
-    //for invalid number choice:
+    cout << "Please enter three integer numbers: ";
+    cin >> num1 >> num2 >> num3;   //prompts user input
+
+    //for invalid number choice
     if (cin.fail())
     {
         cout << "Invalid choice, quitting the program...";
         cin.clear();
         return 1;
     }
-
-    cout << "Please enter three integer nuumbers: ";
-    num1 = cin.get();   //prompts user input
-    num2 = cin.get();   //prompts user input
-    num3 = cin.get();   //prompts user input
-    //for invalid number choice
-    if (cin.fail())
+    if (userInput == d || userInput == D)
     {
-        cout << "Invalid choice, quitting the program...";
-        cin.clear();
-        return 2;
+        if (num1 >= num2 && num1 >= num3)
+        {
+            cout << num1 << " ---> ";
+            if (num2 >= num3)
+            {
+                cout << num2 << " ---> " << num3 << endl;
+            }
+            else
+            {
+                cout << num3 << " ---> " << num2 << endl;
+            }
+        }
+        else if (num2 >= num1 && num2 >= num3)
+        {
+            cout << num2 << " ---> ";
+            if (num1 >= num3)
+            {
+                cout << num1 << " ---> " << num3 << endl;
+            }
+            else
+            {
+                cout << num3 << " ---> " << num1 << endl;
+            }
+        }
+        else
+        {
+            cout << num3 << " ---> ";
+            if (num2 >= num1)
+            {
+                cout << num2 << " ---> " << num1 << endl;
+            }
+            else
+            {
+                cout << num1 << " ---> " << num2 << endl;
+            }
+        }
+
+
     }
+
+
+    else if (userInput == i || userInput == I)
+    {
+        if (num1 <= num2 && num1 <= num3)
+        {
+            cout << num1 << " ---> ";
+            if (num2 <= num3)
+            {
+                cout << num2 << " ---> " << num3 << endl;
+            }
+            else
+            {
+                cout << num3 << " ---> " << num2 << endl;
+            }
+        }
+        else if (num2 <= num1 && num2 <= num3)
+        {
+            cout << num2 << " ---> ";
+            if (num1 <= num3)
+            {
+                cout << num1 << " ---> " << num3 << endl;
+            }
+            else
+            {
+                cout << num3 << " ---> " << num1 << endl;
+            }
+        }
+        else
+        {
+            cout << num3 << " ---> ";
+            if (num2 <= num1)
+            {
+                cout << num2 << " ---> " << num1 << endl;
+            }
+            else
+            {
+                cout << num1 << " ---> " << num2 << endl;
+            }
+        }
+    }
+
+
+
+
     return 0;
 }

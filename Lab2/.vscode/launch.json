@@ -7,10 +7,11 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug",
+            "name": "Launch",
             "program": "${workspaceFolder}/lab2",
             "args": [],
             "cwd": "${workspaceFolder}"
         }
+
     ]
 }
