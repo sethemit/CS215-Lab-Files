@@ -2,7 +2,7 @@
 Course:  CS215-012
 Project: Lab #2
 Purpose: Asks user if they would like 3 numbers sorted in increasing or decreasing order. Program then asks user to input
-         3 numbers, & puts them in the order requested.
+         3 numbers, & puts them in the order requested. Will also display if in leniently/strict order
 
 Author:  Seth Hammonds
 */
