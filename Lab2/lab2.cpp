@@ -46,6 +46,7 @@ int main()
     }
 
     //decreasing order if statement
+    ////////////////////////////////////////////////////////////////////////////////////
     if (userInput == d || userInput == D)
     {
         if (num1 >= num2 && num1 >= num3)
@@ -65,7 +66,7 @@ int main()
             cout << num2 << " ---> ";   //displays num2 first if largest
             if (num1 >= num3)
             {
-                cout << num1 << " ---> " << num3 << endl;
+                cout << num1 << " ---> " << num3 << endl;   //displays num1 second if larger than num3
             }
             else
             {
@@ -89,6 +90,7 @@ int main()
     }
 
     //increasing order if statement
+    ////////////////////////////////////////////////////////////////////////////////////
     else if (userInput == i || userInput == I)
     {
         if (num1 <= num2 && num1 <= num3)
@@ -130,24 +132,25 @@ int main()
     }
 
     //outputs if numbers are strictly/leniently in increasing/decreasing order
-    if (num1 == num2 || num1 == num3 || num2 == num3)
+    ////////////////////////////////////////////////////////////////////////////////////
+    if (num1 == num2 || num1 == num3 || num2 == num3)   //checks if leniently order
     {
-        if (userInput == i || userInput == I)
+        if (userInput == i || userInput == I)   //checks if increasing order
         {
             cout << "Numbers are in leniently increasing order!" << endl;
         }
-        else 
+        else   //checks if decreasing order
         {
             cout << "Numbers are in leniently decreasing order!" << endl;
         }
     }
-    else
+    else    //checks if strictly order
     {
-        if (userInput == i || userInput == I)
+        if (userInput == i || userInput == I)   //checks if increasing order
         {
             cout << "Numbers are in strictly increasing order!" << endl;
         }
-        else 
+        else    //checks if decreasing order
         {
             cout << "Numbers are in strictly decreasing order!" << endl;
         }
