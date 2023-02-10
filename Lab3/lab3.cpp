@@ -41,7 +41,8 @@ int main()
             cout << "\nThat is not a valid number!" << endl;
             cin.clear(); // Clear the failing state.
         } 
-        else if (userNum1 < -1 || userNum2 < -1 || userNum3 < -1 || userNum4 < -1 || userNum5 < -1 || userNum6 < -1 || userNum7 < -1 || userNum8 < -1) {
+        else if (userNum1 < -1 || userNum2 < -1 || userNum3 < -1 || userNum4 < -1 || 
+                 userNum5 < -1 || userNum6 < -1 || userNum7 < -1 || userNum8 < -1) {
             cout << "\nThat is not a valid number!" << endl;
             cin.clear();
         }
@@ -53,12 +54,12 @@ int main()
         if(finalCheck){
             //step one calculations
             stepOne = userNum8 + userNum6 + userNum4 + userNum2;
-
             //step two calculations
-            stepTwo = ((2*userNum7)%10) + ((2*userNum7)/10) + ((2*userNum5)%10) + ((2*userNum5)/10) + ((2*userNum3)%10) + ((2*userNum3)/10) + ((2*userNum1)%10) + ((2*userNum1)/10);
-
+            stepTwo = ((2*userNum7)%10) + ((2*userNum7)/10) + ((2*userNum5)%10) + ((2*userNum5)/10) + 
+                      ((2*userNum3)%10) + ((2*userNum3)/10) + ((2*userNum1)%10) + ((2*userNum1)/10);
             //final step calculations
             finalStep = (stepOne + stepTwo) % 10;
+
             if (finalStep != 0) {
                     for (int checkDigit = 0; checkDigit < 10; checkDigit++){
                         finalStep = ((checkDigit + userNum6 + userNum4 + userNum2) + stepTwo) % 10;
@@ -73,6 +74,7 @@ int main()
             }
         }
     } while(!programQuit);
+    
     cout << "\nThank you for using Credit Card Validation!\n" << endl; 
     return 0;
 }
