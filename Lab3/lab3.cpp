@@ -13,8 +13,7 @@ using namespace std;
 int main()
 {
     string userInput;
-    bool programQuit = false;
-    bool finalCheck = false;
+    bool programQuit,finalCheck = false;
     int userNum1,userNum2,userNum3,userNum4,userNum5,userNum6,userNum7,userNum8,stepOne,stepTwo,finalStep = 0;
 
     //main loop that quits if -1 is entered
@@ -24,16 +23,15 @@ int main()
         //subtract 49 due to ASCII code for 0 
         userNum1 = userInput[0] - 48;
         userNum2 = userInput[1] - 48;
-        if (userNum1 != -3 && userNum2 != 1){   //-3 & 1 equals -1 after subtracting 48 from each character code
+        if (userNum1 != -3 && userNum2 != 1){   //-3 & 1 equals '-1' after subtracting 48 from each character code
             userNum3 = userInput[2] - 48;
             userNum4 = userInput[3] - 48;
             userNum5 = userInput[4] - 48;
             userNum6 = userInput[5] - 48;
             userNum7 = userInput[6] - 48;
             userNum8 = userInput[7]- 48;
-            //cout << userNum1 << userNum2 << userNum3 << userNum4 << userNum5 << userNum6 << userNum7 << userNum8;
         }
-        else {
+        else if (userNum1 == -3 && userNum2 == 1){
             break;
         }
 
@@ -49,7 +47,7 @@ int main()
         else {
             finalCheck = true;
         }
-        cin.ignore(256, '\n'); //skip any possible bad input 
+        //cin.ignore(256, '\n'); //skip any possible bad input 
 
         if(finalCheck){
             //step one calculations
@@ -59,7 +57,7 @@ int main()
                       ((2*userNum3)%10) + ((2*userNum3)/10) + ((2*userNum1)%10) + ((2*userNum1)/10);
             //final step calculations
             finalStep = (stepOne + stepTwo) % 10;
-
+            //checks if the last digit is 0 & if not, finds the correct check number
             if (finalStep != 0) {
                     for (int checkDigit = 0; checkDigit < 10; checkDigit++){
                         finalStep = ((checkDigit + userNum6 + userNum4 + userNum2) + stepTwo) % 10;
@@ -74,7 +72,6 @@ int main()
             }
         }
     } while(!programQuit);
-
     cout << "\nThank you for using Credit Card Validation!\n" << endl; 
     return 0;
 }
