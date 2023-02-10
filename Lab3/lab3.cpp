@@ -20,7 +20,7 @@ int main()
     do {
         cout << "Please enter the 8-digit credit card number (enter -1 to quit): ";
         getline(cin,userInput);
-        //subtract 49 due to ASCII code for 0 
+        //subtract 48 due to ASCII code for 0 
         userNum1 = userInput[0] - 48;
         userNum2 = userInput[1] - 48;
         if (userNum1 != -3 && userNum2 != 1){   //-3 & 1 equals '-1' after subtracting 48 from each character code
