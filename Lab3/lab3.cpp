@@ -33,7 +33,7 @@ int main()
             userNum8 = userInput[7]- 48;
             //cout << userNum1 << userNum2 << userNum3 << userNum4 << userNum5 << userNum6 << userNum7 << userNum8;
         }
-        else if (userNum1 == -3 && userNum2 == 1){
+        else {
             break;
         }
 
@@ -74,7 +74,7 @@ int main()
             }
         }
     } while(!programQuit);
-    
+
     cout << "\nThank you for using Credit Card Validation!\n" << endl; 
     return 0;
 }
