@@ -1,8 +1,10 @@
 /*
 Course:  CS215-012
 Project: Lab #3
-Purpose: 
-
+Purpose: Program prompts user to input credit card number. It then checks if the number is valid. 
+         If not, it tells the user what the check digit should be.
+         Program will exit the loop when -1 is entered.
+         
 Author:  Seth Hammonds
 */
 
@@ -39,15 +41,15 @@ int main()
             cout << "\nThat is not a valid number!" << endl;
             cin.clear(); // Clear the failing state.
         } 
+        //checks if number is negative
         else if (userNum1 < -1 || userNum2 < -1 || userNum3 < -1 || userNum4 < -1 || 
                  userNum5 < -1 || userNum6 < -1 || userNum7 < -1 || userNum8 < -1) {
             cout << "\nThat is not a valid number!" << endl;
             cin.clear();
         }
         else {
-            finalCheck = true;
+            finalCheck = true; //allows program to continue
         }
-        //cin.ignore(256, '\n'); //skip any possible bad input 
 
         if(finalCheck){
             //step one calculations
