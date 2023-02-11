@@ -66,6 +66,7 @@ int main()
                         if (finalStep == 0) {
                             cout << "Number is invalid." << endl;
                             cout << "Check digit should have been " << checkDigit << endl;
+                            break;
                         }
                     }
             }
