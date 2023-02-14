@@ -62,7 +62,9 @@ int main()
             //checks if the last digit is 0 & if not, finds the correct check number
             if (finalStep != 0) {
                     for (int checkDigit = 0; checkDigit < 10; checkDigit++){
-                        finalStep = ((checkDigit + userNum6 + userNum4 + userNum2) + stepTwo) % 10;
+                        int calculation;
+                        calculation = ((checkDigit + userNum6 + userNum4 + userNum2) + stepTwo);
+                        finalStep = calculation % 10;
                         if (finalStep == 0) {
                             cout << "Number is invalid." << endl;
                             cout << "Check digit should have been " << checkDigit << endl;
