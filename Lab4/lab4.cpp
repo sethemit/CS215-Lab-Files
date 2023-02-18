@@ -1,7 +1,9 @@
 /*
 Course:  CS215-012
 Project: Lab #4
-Purpose: 
+Purpose: Program asks the user to input an integer in the range 1-30 as the size of 
+         a triangle. It then draws a triangle with the size specified by the user.
+         It then draws the triangle rotated 90 degrees clockwise, and then 180 degrees.
          
 Author:  Seth Hammonds
 */
