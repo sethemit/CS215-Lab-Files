@@ -1,4 +1,4 @@
-/*course: CS215 - 00x
+/*course: CS215 - 012
  *Project: Demo how to use array to organize data items
  *Purpose: to practice how to use array to organize data items and how to pass an array to a function
  *         (Use three arrays: smallArray, midArray and largeArray as examples, their capacities are 5, 10 and 100 respectively)
@@ -8,7 +8,7 @@
  *          3. define a function to remove the maximum value from an array (Note the size of the array will be changed!!!)
  *          4. Use your creative ideas to do something extra
  *
- *Author: (your name)
+ *Author: Seth Hammonds
  */
 
 #include <iostream>
