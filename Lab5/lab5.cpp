@@ -59,9 +59,10 @@ string roman_numeral(int n)
 
     //Declaring the index & string to return
     int index = 12;                           //Index of the arrays
-    string returnString;
+    string returnString;                      //String to return
 
-    while(n) 
+    //Looping through the arrays
+    while(n)                                  //While n is not 0
     {
       int numCalc = n / numbers[index];       //Calculating which numeral to use
       n = n % numbers[index];                 //Getting the remainder
