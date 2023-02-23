@@ -55,7 +55,7 @@ string roman_numeral(int n)
 {
     //Arrays of numbers & their equivalent roman numerals
     const string romanNum[] = {"I","IV","V","IX","X","XL","L","XC","C","CD","D","CM","M"};
-    const int numbers[] = {1,4,5,9,10,40,50,90,100,400,500,900,1000};
+    const int digitNum[] = {1,4,5,9,10,40,50,90,100,400,500,900,1000};
 
     //Declaring the index & string to return
     int index = 12;                           //Index of the arrays
@@ -64,8 +64,8 @@ string roman_numeral(int n)
     //Looping through the arrays
     while(n)                                  //While n is not 0
     {
-      int numCalc = n / numbers[index];       //Calculating which numeral to use
-      n = n % numbers[index];                 //Getting the remainder
+      int numCalc = n / digitNum[index];       //Calculating which numeral to use
+      n = n % digitNum[index];                 //Getting the remainder
       while(numCalc--)
       {
         returnString += romanNum[index];      //Adding the numeral to the string
