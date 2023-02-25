@@ -1,5 +1,5 @@
 /*Course: CS215-012
- *Project: Lab 5 (As part of Project 1)
+ *Project: Lab #5 (As part of Project 1)
  *Purpose: Display the Super Bowl in Roman Numeral Representation
  *         The first Super Bowl was hold in 1967 (at Los Angeles Memorial Coliseum)
  *         This program displays the Super Bowls in a centenary, from year 2000 to year 2099.
