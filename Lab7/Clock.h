@@ -12,7 +12,8 @@
 const int HOUR_MIN_SEC = 60;
 const int HOURS_TO_WRAP = 24;
 
-class Clock {
+class Clock 
+{
     public:
         //default constructor
         Clock();
@@ -48,10 +49,6 @@ class Clock {
         //Declare data members of the class
         // 0 <= hours < 24, 0 <= minutes < 60, 0 <= seconds < 60
         int hours, minutes, seconds;
-
-        //Helper function to validate the data members
-        //it only serves the member functions of this class, hence private
-        void adjustClock();
 };
 
 #endif		/* CLOCK_H*/
