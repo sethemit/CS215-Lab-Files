@@ -7,6 +7,7 @@
  */
 #include <iostream>
 #include "Clock.h"
+#include "Clock.cpp"
 
 using namespace std;
 

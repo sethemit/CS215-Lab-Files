@@ -1,3 +1,10 @@
+/* File: clock.cpp
+ * Course: CS215-012
+ * Project: Lab 7
+ * Purpose: Provide the implementation of the class named Clock
+ *          Note that it represents a 24-hour clock (or you can call it military time)
+ * Author:  Seth Hammonds
+ */
 #include <iostream>
 #include <string>
 #include "Clock.h"
