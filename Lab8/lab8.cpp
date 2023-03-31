@@ -1,11 +1,11 @@
 /*
- *Course: CS215 - 00x
+ *Course: CS215 - 012
  *Project: Lab 8 (As part of Project 2)
  *Purpose: It demonstrates the game of Nim played between two computer players
  *         In combinatorial game theory, a two-player deterministic perfect information turn-based game
  *         is a first-player-win if with perfect play the first player to move can always force a win.
  *         This program also shows that the game of Nim is a "CONDITIONAL first-player-win" game using two computer players.
- *Author: (your name)
+ *Author:  Seth Hammonds
  */
 #include <iostream>
 #include <cmath>
@@ -13,13 +13,9 @@
 #include <ctime>
 #include <iomanip>
 #include "Nim.h"
+#include "Nim.cpp"
 
 using namespace std;
-
-
-
-
-
 
 int main()
 {
