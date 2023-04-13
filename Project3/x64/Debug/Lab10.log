@@ -1,0 +1,6 @@
+﻿  Lab10.cpp
+  card.cpp
+  deck.cpp
+C:\Users\yipike\source\repos\Spring2023\Labs\Lab10\Lab10\deck.cpp(34,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  Lab10.vcxproj -> C:\Users\yipike\source\repos\Spring2023\Labs\Lab10\Lab10\x64\Debug\Lab10.exe
