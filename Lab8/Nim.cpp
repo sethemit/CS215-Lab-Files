@@ -43,7 +43,6 @@ void Nim::computer_play()
     int numMoves = 0;       // number of moves         
     int pow2 = 0;           // the largest power of 2
     int move = 0;           // the move to take
-    int tempMove = 0;       // placeholder for move
     int tempPileSize = 0;   // placeholder for pileSize
 
     // find all legal moves
@@ -53,30 +52,23 @@ void Nim::computer_play()
         }
     }
 
-    // if there are no moves, take one marble
-    if (numMoves == 0) {
-        pileSize--;
-    }
-    else {
-        // if the sum is 0, take a random legal move
-        if (numMoves == 0 || pileSize == 0) {
-            int index = rand() % numMoves;
-            pileSize -= computerMoves[index];
-        }
-        else {
-            // find the largest power of 2 that is less than or equal to xor_sum
-            for (int i = 0; i < pileSize; i++) {
-                pow2Table[i] = (pow(2, i)) - 1;
-                for (int j = 0; j < pileSize; j++) {
-                    if (pow2Table[j] < pileSize) {
-                        pow2 = pow2Table[j];
-                    }
+    for (int i = 0; i <= pileSize / 2; i++) {
+        pow2Table[i] = ((pow(2, i)) - 1);
+        for (int j = 0; j <= pileSize / 2; j++) {
+            if (pow2Table[j] == (pileSize-pow2Table[j])) {
+                pow2 = pow2Table[j];
+                break;
+            }
+            else {
+                if (pow2Table[i] != pileSize) {
+                    int randomNum = rand() % pileSize;
+                    pow2 = randomNum;
                 }
             }
-            tempPileSize = pileSize;
-            pileSize = pow2;
-            move = tempPileSize - pow2;
-            cout << "The computer takes " << move << " marbles.\n" << endl;
         }
     }
+    tempPileSize = pileSize;
+    pileSize = pow2;
+    move = tempPileSize - pow2;
+    cout << "The computer takes " << move << " marbles.\n" << endl;
 }

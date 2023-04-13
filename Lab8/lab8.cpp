@@ -25,7 +25,7 @@ int main()
     // Generate the initial size of pile (of marbles)
     // at the range of [PILE_MIN, PILE_MAX]
     // for testing purpose only: we set the initial size of pile to a constant PILE_SIZE_TEST
-    int pileSize = PILE_SIZE_TEST;
+    int pileSize = 50;
 
     // comment out the testing purpose at line number 27, enable the following statement, which is the general case
     //int pileSize = PILE_MIN + rand() % (PILE_MAX - PILE_MIN + 1);
