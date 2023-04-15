@@ -12,6 +12,8 @@
 #include <iostream>
 #include "card.h"
 #include "deck.h"
+#include "deck.cpp"
+#include "card.cpp"
 
 using namespace std;
 
@@ -25,7 +27,7 @@ int main()
     // then shuffle the cards
     Deck playDeck;
     playDeck.createDeck();
-    //playDeck.shuffleDeck();
+    playDeck.shuffleDeck();
 
     Card yourCards[HANDS];
     Card myCards[HANDS];
